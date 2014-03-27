@@ -677,3 +677,14 @@ TilingManager.prototype._getLayouts = function(desktop, screen) {
 		return result;
 	}
 }
+
+TilingManager.getActiveClientGeometry = function() {
+	if (workspace.activeClient == null) {
+		return Qt.rect(0,0,0,0);
+	}
+	return workspace.activeClient.geometry;
+}
+
+TilingManager.getWCA = function() {
+	return workspace.clientActivated;
+}
