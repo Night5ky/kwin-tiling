@@ -203,8 +203,8 @@ Tiling.prototype._getTileIndex = function(x, y) {
 			var tile = this.layout.tiles[i];
 			if (tile.rectangle.x <= x
                 && tile.rectangle.y <= y
-                && tile.rectangle.x + tile.rectangle.width > x
-                && tile.rectangle.y + tile.rectangle.height > y) {
+                && tile.rectangle.x + tile.rectangle.width >= x
+                && tile.rectangle.y + tile.rectangle.height >= y) {
 				return i;
 			}
 		}
