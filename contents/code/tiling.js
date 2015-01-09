@@ -329,9 +329,6 @@ Tiling.prototype.applyGaps = function(rect) {
 	if (rect.x == this.screenRectangle.x) {
 		rect.x += this.screenGapSizeLeft;
 		rect.width -= this.screenGapSizeLeft;
-	} else {
-		rect.x += this.windowsGapSizeWidth;
-		rect.width -= this.windowsGapSizeWidth;
 	}
 	if (rect.y + rect.height == this.screenRectangle.y + this.screenRectangle.height) {
 		rect.height -= this.screenGapSizeBottom;
@@ -341,8 +338,5 @@ Tiling.prototype.applyGaps = function(rect) {
 	if (rect.y == this.screenRectangle.y) {
 		rect.y += this.screenGapSizeTop;
 		rect.height -= this.screenGapSizeTop;
-	} else {
-		rect.y += this.windowsGapSizeHeight;
-		rect.height -= this.windowsGapSizeHeight;
 	}
 };
